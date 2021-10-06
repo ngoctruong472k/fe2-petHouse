@@ -335,7 +335,6 @@ function playAudioGame() {
         }
     }
 }
-
 noteGame.onclick = function () {
     noteGame.style.display = "none";
 }
