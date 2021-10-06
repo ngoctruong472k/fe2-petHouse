@@ -4,6 +4,8 @@ let happiness = 100;
 let coins = 100;
 let countFree = 2;
 let eatFood = 4;
+let levelPet = 0;
+let level = 1;
 var circleHungerProgress = document.querySelector('#progressBarHung');
 var circleHappinessProgress = document.querySelector('#progressBarHapp');
 var circleHygienicProgress = document.querySelector('#progressBarHygienic');
@@ -18,9 +20,16 @@ let noteGame = document.getElementById("noteGame");
 let notiGameTile = document.getElementById("noti-game-title");
 let gameOver = document.getElementById("gameOver");
 let coin = document.querySelector('.coinAnimation');
+let progressLevel = document.getElementById('progressLevel');
+let levelNumber = document.getElementById('levelNumber');
 audio = new Audio();
 let pickUpCoin = () => {
-    coins += 20;
+    if (level <= 1) {
+        coins += 10;
+    }
+    else {
+        coins += ((level * 2) + 10);
+    }
     coinTab.textContent = coins;
     coin.style.display = "none";
 }
@@ -35,6 +44,15 @@ setInterval(() => {
 
     }, 10001);
 }, 10000);
+function numberLevel(level) {
+    if (level < 10) {
+        level = "0" + level;
+    }
+    else {
+        return level;
+    }
+    return level;
+}
 function setCircleHungerProgress(hunger) {
     var radius = circleHungerProgress.r.baseVal.value;
     // Áp dụng công thức diện tích hình tròn : S =r*2.PI để tính 
@@ -79,6 +97,12 @@ function setImageDog(hunger) {
 }
 function showNoti() {
     noteGame.style.display = "block";
+}
+
+function setLevelProgress(data) {
+    progressLevel.setAttribute('aria-valuenow', data);
+    progressLevel.setAttribute('style', 'width:' + Number(data).toFixed(0) + '%');
+    progressLevel.innerHTML = `<b>${Number(data).toFixed(0) + '%'}</b>`
 }
 
 function onBuy(name, price) {
@@ -156,8 +180,19 @@ function onBuy(name, price) {
             happiness += price;
             if (coins < 0) { coins = 0; };
             if (happiness > 100) { happiness = 100; }
+            if (level >= 5) {
+                levelPet += price * (1 / 3);
+            }
+            else{ levelPet += (price / 2)}
+            if (levelPet >= 100) {
+                levelPet = 100;
+                level += 1;
+                levelPet = 0;
+            }
+            setLevelProgress(levelPet);
             setCircleHappinessProgress(happiness);
             coinTab.textContent = coins
+            levelNumber.textContent = numberLevel(level);
         }
     }
     else if (name === "hygienic") {
@@ -180,11 +215,22 @@ function onBuy(name, price) {
             `
         } else if (coins >= price) {
             coins -= price;
-            hygienic += price;
+            hygienic = 100;
             if (coins < 0) { coins = 0; };
             if (hygienic > 100) { hygienic = 100; }
+            if (level >= 5) {
+                levelPet += price * (1 / 3);
+            }
+            else{ levelPet += (price / 2)}
+            if (levelPet >= 100) {
+                levelPet = 100;
+                level += 1;
+                levelPet = 0;
+            }
+            setLevelProgress(levelPet);
             setCircleHygienicProgress(hygienic);
             coinTab.textContent = coins
+            levelNumber.textContent = numberLevel(level);
         }
     }
 }
@@ -217,7 +263,19 @@ foodDog.onclick = function () {
             hunger += 20;
             if (coins < 0) { coins = 0; };
             if (hunger > 100) { hunger = 100; };
+            if (level >= 5) {
+                levelPet += 20 * (1 / 3);
+            }
+            else{ levelPet += (20 / 2)}
+            if (levelPet >= 100) {
+                levelPet = 100;
+                level += 1;
+                levelPet = 0;
+            }
+            setLevelProgress(levelPet);
             setCircleHungerProgress(hunger);
+
+            levelNumber.textContent = numberLevel(level);
         }
         else {
             eatFood = 0;
@@ -277,10 +335,7 @@ function playAudioGame() {
         }
     }
 }
-// function closeNotigame() {
-//     console.log("đã tắt");
-//     noteGame.style.display = "none";
-// }
+
 noteGame.onclick = function () {
     noteGame.style.display = "none";
 }
@@ -299,7 +354,7 @@ function continueGame() {
     playAudioGame()
     onStart();
     setImageDog(hunger);
-    setInterval(onStart, 8000);
+    setInterval(onStart, 3000);
     gameOver.style.display = "none";
 }
 function blackGame() {
@@ -316,9 +371,9 @@ function blackGame() {
 }
 let onStart = () => {
 
-    hygienic -= 1;
+    hygienic -= 6;
     hunger -= 2;
-    happiness -= 3;
+    happiness -= 4;
     if (hygienic <= 0 || hunger <= 0 || happiness <= 0) {
         audio.pause();
         gameOver.style.display = "block";

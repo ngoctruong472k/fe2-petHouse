@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
-@import url('https://fonts.googleapis.com/css?family=Black+Ops+One');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900");
+@import url("https://fonts.googleapis.com/css?family=Black+Ops+One");
 html {
     background-image: url("../images/bg-game.jpg");
     width: 100%;
@@ -40,7 +40,7 @@ body {
     padding: 20px 46px;
     text-align: center;
     text-transform: uppercase;
-    color: #0505A9;
+    color: #0505a9;
     font-size: 16px;
     font-weight: bold;
     background-color: transparent;
@@ -61,7 +61,7 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    border: 2px solid #0505A9;
+    border: 2px solid #0505a9;
     border-radius: 30px;
 }
 
@@ -78,7 +78,7 @@ body {
 }
 
 .blob-btn:hover {
-    color: #FFFFFF;
+    color: #ffffff;
     border-radius: 30px;
 }
 
@@ -113,7 +113,7 @@ body {
     top: 2px;
     width: 25%;
     height: 100%;
-    background: #0505A9;
+    background: #0505a9;
     border-radius: 100%;
     transform: translate3d(0, 150%, 0) scale(1.7);
     transition: transform 0.45s;
@@ -163,8 +163,8 @@ body {
     height: 300px;
     text-align: center;
     /* fill: rgba(255, 255, 255, 0.851); */
-    background: #FCD9C4;
-    box-shadow: 10px 10px #727070;
+    background: #fcd9c4;
+    /* box-shadow: 10px 10px #727070; */
 }
 
 .progress-item {
@@ -223,8 +223,8 @@ body {
     height: 300px;
     /* fill: rgba(255, 255, 255, 0.851); */
     /* background: #FACE9C; */
-    background-color: #FACE9C;
-    box-shadow: 10px 10px #727070;
+    background-color: #face9c;
+    /* box-shadow: 10px 10px #727070; */
 }
 
 #coins-button {
@@ -250,10 +250,10 @@ body {
     border-radius: 50%;
     background: red;
     color: white;
-    padding: 0px 5px;
-    font-size: 10px;
+    padding: 0px 4px;
+    font-size: 8px;
     z-index: 1000;
-    left: 10px;
+    left: 16px;
     top: 22px;
 }
 
@@ -318,7 +318,7 @@ body {
 }
 
 .music-game button#mutebtn {
-    background: url('../images/speaker.svg') no-repeat;
+    background: url("../images/speaker.svg") no-repeat;
     width: 50px;
     height: 50px;
 }
@@ -396,7 +396,7 @@ body {
     width: 750px;
     height: 580px;
     z-index: 33333;
-    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
     left: 24%;
     right: 50%;
     padding: 16px;
@@ -416,7 +416,7 @@ body {
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 160px;
-    font-family: 'Black Ops One', cursive;
+    font-family: "Black Ops One", cursive;
     line-height: 120px;
     text-align: center;
 }
@@ -519,12 +519,12 @@ body {
 }
 
 .image-eat:hover .img-format {
-    animation: shake 1.7s;
+    animation: shake 5s;
     animation-iteration-count: infinite;
 }
 
 .image-eat:hover .quantity {
-    animation: shake 1.7s;
+    animation: shake 5s;
     animation-iteration-count: infinite;
 }
 
@@ -602,7 +602,7 @@ body {
     font-family: corbel;
     color: #ffffff;
     text-decoration: none !important;
-    text-shadow: 1.5px 1.5px #FB3733;
+    text-shadow: 1.5px 1.5px #fb3733;
     padding: 10px 34px 10px 34px;
     border-radius: 20px;
     background: #000000;
