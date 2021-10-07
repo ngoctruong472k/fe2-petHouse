@@ -94,32 +94,37 @@
         </div>
         <div class="petShop">
             <div class="table-eat">
+               <div class="lable-table lable-table-top">Thức ăn</div>
                 <div class="table-eat-top table-eat">
-                    <button class="image-eat" onClick="onBuy('food',20)">
+                    <button class="image-eat" onClick="onBuy('food',20)" style="margin-right: 30px;">
                         <div class="quantity" id="countFree">2</div>
                         <img class="img-format" src="./public/images/dodungtas-removebg.png" alt="" width="65%">
                         <span style="width:60px;">20<img src="./public/images/vang-bg.png" alt="" class="img-bold" width="28%"></span>
                     </button>
+                </div>
+                <div class="lable-table-center lable-table">Đồ chơi</div>
+                <div class="table-eat-center table-eat">
                     <button id="eat-xuong" class="image-eat" onClick="onBuy('happiness',30)">
                         <img class="img-format" src="./public/images/xương.png" alt="" width="65%">
                         <span style="width:60px;">30<img src="./public/images/vang-bg.png" alt="" class="img-bold" width="28%"></span>
                     </button>
-                </div>
-
-                <div class="table-eat-center table-eat">
                     <button id="ball" class="image-eat" onClick="onBuy('happiness',30)">
                         <img class="img-format" src="./public/images/banh.png" alt="" width="55%">
-                        <span style="width:60px;margin-top: 10px;">30<img src="./public/images/vang-bg.png" alt="" class="img-bold" width="28%"></span>
+                        <span style="width:60px;">30<img src="./public/images/vang-bg.png" alt="" class="img-bold" width="28%"></span>
                     </button>
-                    <button id="bear" class="image-eat" onClick="onBuy('happiness',10)">
+                   
+                </div>
+                <div class="table-eat table-eat-top-bottom">
+                    <button id="bear" class="image-eat" onClick="onBuy('happiness',10)" style="margin-right: 30px;">
                         <img class="img-format" src="./public/images/gau.png" alt="" width="65%">
-                        <span style="width:60px;margin-top: 10px;">10<img src="./public/images/vang-bg.png" alt="" class="img-bold" width="28%"></span>
+                        <span style="width:60px;">10<img src="./public/images/vang-bg.png" alt="" class="img-bold" width="28%"></span>
                     </button>
                 </div>
+                <div class="lable-table-bottom lable-table">tắm rửa</div>
                 <div class="table-eat-bottom table-eat">
-                    <button id="clear-body" class="image-eat" onClick="onBuy('hygienic',30)">
+                    <button id="clear-body" class="image-eat" onClick="onBuy('hygienic',30)" style="margin-right: 30px;">
                         <img class="img-format" src="./public/images/showerDog.png" alt="" width="75%" >
-                        <span style="width:60px;margin-top: 10px;">30<img src="./public/images/vang-bg.png" alt="" class="img-bold" width="28%"></span>
+                        <span style="width:60px;">30<img src="./public/images/vang-bg.png" alt="" class="img-bold" width="28%"></span>
                     </button>
                 </div>
             </div>
@@ -147,15 +152,15 @@
     </div>
     <div class="game-over" id="gameOver">
         <div class="gameover">
-            <p> GAME </p>
-            <p> OVER </p>
+            <p> KẾT </p>
+            <p> THÚC </p>
         </div>
         <div class="continue">
-            <p> BẠN CÓ MUỐN TIẾP TỤC CHƠI GAME ? </p>
+            <p> HÃY CỐ GẮN VÀO LẦN TIẾP THEO NHÁ !! </p>
         </div>
 
         <div class="action">
-            <div class="yes" id="continue" onClick="continueGame()"> TIẾP TỤC </div>
+            <div class="yes" id="continue" onClick="continueGame()"> CHƠI TIẾP</div>
             <div class="no" id="black" onClick="blackGame()"> THOÁT</div>
         </div>
     </div>
