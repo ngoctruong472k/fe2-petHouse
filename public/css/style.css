@@ -1,6 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900");
-@import url("https://fonts.googleapis.com/css?family=Black+Ops+One");
+@import url("https://fonts.googleapis.com/css?family=Black+Ops+One"); */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 html {
     background-image: url("../images/bg-game.jpg");
     width: 100%;
@@ -9,10 +11,12 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+    
 }
 
 body {
     background: transparent !important;
+    font-family: 'Cormorant', serif;
 }
 
 #startGame {
@@ -41,7 +45,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: #0505a9;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     background-color: transparent;
     outline: none;
@@ -49,7 +53,6 @@ body {
     transition: color 0.5s;
     cursor: pointer;
     border-radius: 30px;
-    font-family: Oswald;
     margin-bottom: 130px;
 }
 
@@ -176,11 +179,10 @@ body {
 }
 
 .progress-item .lable {
-    font-size: 18px;
+    font-size: 20px;
     font-style: italic;
     font-weight: 600;
     margin: 8px 0px;
-    font-family: Oswald;
 }
 
 .progress-ring__circle {
@@ -250,8 +252,8 @@ body {
     border-radius: 50%;
     background: red;
     color: white;
-    padding: 0px 4px;
-    font-size: 8px;
+    padding: 0px 5px;
+    font-size: 10px;
     z-index: 1000;
     left: 16px;
     top: 22px;
@@ -260,6 +262,7 @@ body {
 .image-eat span {
     color: darkslategray;
     font-weight: 700;
+    font-size: 20px;
 }
 
 .coinAnimation {
@@ -285,6 +288,12 @@ body {
     bottom: 0%;
     display: flex;
 }
+
+/* #coins {
+    border: 1px black solid;
+    padding:4px;
+    border-radius: 20px;
+} */
 
 @keyframes animaInfo {
     0% {
@@ -336,22 +345,20 @@ body {
 }
 
 #noti-game-title {
-    font-size: 22px;
+    font-size: 24px;
     font-style: italic;
     font-weight: 600;
     margin: 8px 0px;
-    font-family: Oswald;
 }
 
 .btn-noti {
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     position: absolute;
     background: #fff;
     font-style: italic;
     font-weight: 600;
     margin: 8px 0px;
-    font-family: Oswald;
     padding: 8px 50px;
     text-transform: uppercase;
     bottom: 8px;
@@ -378,7 +385,6 @@ body {
     font-style: italic;
     font-weight: 600;
     margin: 8px 0px;
-    font-family: Oswald;
 }
 
 .btn-noti:hover rect {
@@ -390,12 +396,12 @@ body {
 
 .game-over {
     position: absolute;
-    top: 5%;
-    width: 750px;
-    height: 580px;
+    top: 8%;
+    width: 705px;
+    height: 557px;
     z-index: 33333;
-    background: linear-gradient(to right, #66FFFF 0%, #33FF99 100% );
-    left: 24%;
+    background: linear-gradient(to right, #990000 0%, #777777 100%);
+    left: 30%;
     right: 50%;
     padding: 16px;
     border-radius: 20px;
@@ -405,8 +411,7 @@ body {
 .gameover {
     padding-top: 32px;
     padding-bottom: 32px;
-    /* background: linear-gradient(45deg, #009966, #009999, #9999FF, #CC99CC, #FF99CC, #FF6666, #9999FF, #009999, #009966); */
-    background: #770000 ;
+    background: #DDDDDD;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -414,20 +419,106 @@ body {
 .gameover p {
     margin-top: 0px;
     margin-bottom: 0px;
-    font-size: 160px;
-    font-family: "Black Ops One", cursive;
+    font-size: 124px;
     line-height: 120px;
     text-align: center;
+    font-family: 'Black Ops One', cursive;
 }
 
 .continue {
     text-align: center;
-    font-size: 22px;
+    font-size: 24px;
     font-style: italic;
     font-weight: 600;
     margin: 8px 0px;
-    font-family: Oswald;
+    color: #DDDDDD;
 }
+
+/* Trang */
+
+.yes {
+    background-color: #1fd1f9;
+    background: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    text-align: center;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-size: 1.4em;
+    line-height: 1.2em;
+    font-weight: 300;
+    position: absolute;
+    left: 120px;
+    padding: 10px 34px 10px;
+    width: 200px;
+    height: 20px;
+    padding: 30px 0;
+    border: 1px solid transparent;
+    overflow: hidden;
+    display: inline-block;
+    transition: all 0.5s;
+    box-shadow: 0px 3px 0px #363858;
+    border-radius: 4px;
+}
+
+.yes:hover, .yes:active {
+    text-decoration: none;
+    color: #fff;
+    border-color: #363858;
+    background-color: #1fd1f9;
+    background: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    box-shadow: 0 0 0 #363858;
+}
+
+.btn-label {
+    bottom: 13px;
+    display: inline-block;
+    position: relative;
+    padding-right: 0;
+    transition: padding-right 0.5s;
+    color: #fff;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.btn-label:after {
+    content: "";
+    position: absolute;
+    right: -50px;
+    opacity: 0;
+    top: 22%;
+    width: 10px;
+    height: 10px;
+    margin-right: -10px;
+    background: rgba(0, 0, 0, 0);
+    border: 3px solid #fff;
+    border-top: none;
+    border-right: none;
+    transition: opacity 0.5s, top 0.5s, right 0.5s;
+    transform: rotate(225deg);
+}
+
+.yes:hover .btn-label, .yes:active .btn-label {
+    padding-right: 30px;
+    color: #f5f1e7;
+}
+
+.yes:hover .btn-label:after, .yes:active .btn-label:after {
+    /* transition:opacity: 0.5s, top 0.5s, right 0.5s; */
+    opacity: 1;
+    right: 10px;
+    top: 22%;
+}
+
+.no{
+    border: none;
+    width: 30%;
+    height: 62px;
+    margin-left: 340px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 27px;
+    font-weight: 600;
+}
+/*  */
 
 .action {
     display: flex;
@@ -440,22 +531,20 @@ body {
     margin-right: 24px;
 }
 
-.yes {
+/* .yes {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-    font-family: corbel;
     color: #ffffff;
     text-shadow: 2.5px 2.5px #000000;
     padding: 10px 34px 10px;
-    /* border: 1px solid #000000; */
     border-radius: 20px;
     background: #006400;
     margin-right: 30px;
     float: left;
     text-decoration: none !important;
     cursor: pointer;
-}
+} */
 
 .img-bold {
     margin-bottom: 5px;
@@ -476,10 +565,9 @@ body {
     position: absolute;
     bottom: 50px;
     left: 50px;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     color: #fff;
     font-weight: 600;
-    font-family: Oswald;
 }
 
 .table-coin {
@@ -504,27 +592,16 @@ body {
     border: none;
     background: none;
 }
+.table-eat-center {
+    top: 80px;
+}
 
+.table-eat-bottom {
+    top: 170px;
+}
 
-.table-eat-center{
+.table-eat {
     display: flex;
-}
-.table-eat-top-bottom{ top: 180px;}
-.lable-table-center{
-    margin-top: 60px;
-}
-.lable-table-bottom{
-    margin-top: 140px;
-}
-.table-eat-bottom{
-    top: 280px;
-}
-.lable-table{
-    font-size: 18px;
-    font-style: italic;
-    font-weight: 600;
-    font-family: Oswald;
-    margin-left: 50px;
 }
 
 /* .image-eat:hover .img-format {
@@ -532,6 +609,7 @@ body {
     transform: scale(1.5);
     animation-iteration-count: infinite;
 } */
+
 .image-eat:hover .img-format {
     -webkit-animation-name: animacao2;
     -webkit-animation-duration: 0.8s;
@@ -597,7 +675,7 @@ body {
     }
 }
 
-.yes:hover {
+/* .yes:hover {
     -webkit-animation-name: animacao2;
     -webkit-animation-duration: 0.8s;
     -webkit-animation-timing-function: linear;
@@ -614,13 +692,12 @@ body {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-}
+} */
 
-.no {
+/* .no {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-    font-family: corbel;
     color: #ffffff;
     text-decoration: none !important;
     text-shadow: 1.5px 1.5px #fb3733;
@@ -629,7 +706,7 @@ body {
     background: #000000;
     float: left;
     cursor: pointer;
-}
+} */
 
 @-webkit-keyframes animacao3 {
     0% {
@@ -685,7 +762,7 @@ body {
     }
 }
 
-.no:hover {
+/* .no:hover {
     color: #ffffff;
     -webkit-animation-name: animacao3;
     -webkit-animation-duration: 0.15s;
@@ -702,7 +779,7 @@ body {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-}
+} */
 
 #dogFeel {
     cursor: pointer;

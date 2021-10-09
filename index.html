@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Game</title>
+    <title>PET HOME</title>
     <link rel="icon" type="image/x-icon" href="./public/images/tam.gif">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="./public/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 
+    
 </head>
 
 <body>
@@ -85,53 +86,41 @@
         </div>
         <div class="music-game">
             <button id="playpausebtn"></button>
-            <!-- <button id="mutebtn" class="ml-2"></button> -->
         </div>
         <div class="table-coin">
             <button id="coins-button" class="table-coin-button">
-                <span style="margin-top: 10px;" id="coins">100</span>
+                <span style="font-size: 22px;" id="coins">100</span>
                 <img src="public/images/golds.png" alt="" width="35%">
             </button>
         </div>
         <div class="petShop">
             <div class="table-eat">
-                <div class="lable-table lable-table-top">Thức ăn</div>
                 <div class="table-eat-top table-eat">
-                    <button class="image-eat" onClick="onBuy('food',20)" style="margin-right: 30px;">
+                    <button class="image-eat" onClick="onBuy('food',20)">
                         <div class="quantity" id="countFree">2</div>
                         <img class="img-format" src="./public/images/dodungtas-removebg.png" alt="" width="65%">
-                        <span style="width:60px;">20<img src="./public/images/vang-bg.png" alt="" class="img-bold"
-                                width="28%"></span>
+                        <span style="width:60px;">20<img src="./public/images/vang-bg.png" alt="" class="img-bold" width="28%"></span>
                     </button>
-                </div>
-                <div class="lable-table-center lable-table">Đồ chơi</div>
-                <div class="table-eat-center table-eat">
                     <button id="eat-xuong" class="image-eat" onClick="onBuy('happiness',30)">
                         <img class="img-format" src="./public/images/xương.png" alt="" width="65%">
-                        <span style="width:60px;">30<img src="./public/images/vang-bg.png" alt="" class="img-bold"
-                                width="28%"></span>
+                        <span style="width:60px;">30<img src="./public/images/vang-bg.png" alt="" class="img-bold" width="28%"></span>
                     </button>
+                </div>
+
+                <div class="table-eat-center table-eat">
                     <button id="ball" class="image-eat" onClick="onBuy('happiness',30)">
                         <img class="img-format" src="./public/images/banh.png" alt="" width="55%">
-                        <span style="width:60px;">30<img src="./public/images/vang-bg.png" alt="" class="img-bold"
-                                width="28%"></span>
+                        <span style="width:60px;">30<img src="./public/images/vang-bg.png" alt="" class="img-bold" width="28%"></span>
                     </button>
-
-                </div>
-                <div class="table-eat table-eat-top-bottom">
-                    <button id="bear" class="image-eat" onClick="onBuy('happiness',10)" style="margin-right: 30px;">
+                    <button id="bear" class="image-eat" onClick="onBuy('happiness',10)">
                         <img class="img-format" src="./public/images/gau.png" alt="" width="65%">
-                        <span style="width:60px;">10<img src="./public/images/vang-bg.png" alt="" class="img-bold"
-                                width="28%"></span>
+                        <span style="width:60px;">10<img src="./public/images/vang-bg.png" alt="" class="img-bold" width="28%"></span>
                     </button>
                 </div>
-                <div class="lable-table-bottom lable-table">tắm rửa</div>
                 <div class="table-eat-bottom table-eat">
-                    <button id="clear-body" class="image-eat" onClick="onBuy('hygienic',30)"
-                        style="margin-right: 30px;">
-                        <img class="img-format" src="./public/images/showerDog.png" alt="" width="75%">
-                        <span style="width:60px;">30<img src="./public/images/vang-bg.png" alt="" class="img-bold"
-                                width="28%"></span>
+                    <button id="clear-body" class="image-eat" onClick="onBuy('hygienic',30)">
+                        <img class="img-format" src="./public/images/showerDog.png" alt="" width="75%" >
+                        <span style="width:60px;">30<img src="./public/images/vang-bg.png" alt="" class="img-bold" width="28%"></span>
                     </button>
                 </div>
             </div>
@@ -159,16 +148,19 @@
     </div>
     <div class="game-over" id="gameOver">
         <div class="gameover">
-            <p> KẾT </p>
-            <p> THÚC </p>
+            <p> GAME </p>
+            <p> OVER </p>
         </div>
         <div class="continue">
-            <p> THÚ CƯNG ĐÃ CHẾT VÌ CHĂM SÓC KHÔNG CẨN THẬN, BẠN TỆ!! </p>
+            <p> HÃY CỐ GẮN VÀO LẦN TIẾP THEO NHÁ !! </p>
         </div>
 
         <div class="action">
-            <div class="yes" id="continue" onClick="continueGame()"> CHƠI LẠI</div>
-            <div class="no" id="black" onClick="blackGame()"> THOÁT</div>
+            <div class="yes" id="continue" onClick="continueGame()">
+                <span class="btn-label">TIẾP TỤC</span>
+            </div>
+            <!-- <div class="no" id="black" onClick="blackGame()">Read More</div> -->
+            <button class="no btn btn-danger" id="black" onClick="blackGame()">THOÁT</button>
         </div>
     </div>
     <!-- <script src="./public/js/vong1.js"></script> -->
