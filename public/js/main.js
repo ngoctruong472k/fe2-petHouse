@@ -242,48 +242,58 @@ dogFeel.onclick = function () {
 }
 
 foodDog.onclick = function () {
-    if (hunger >= 100) {
+    if (eatFood > 0) {
+        if (hunger >= 100) {
+            showNoti();
+            notiGameTile.innerHTML = `
+                <span>THÚ CƯNG ĐÃ</span>
+                <br>
+                <b>NO SAY</b>
+            `
+            //    show thông báo thức ăn đã 100%
+        } else {
+            if (countFree == 0) {
+                free.style.display = "none";
+            }
+            eatFood = eatFood - 1;
+            countFree = Math.round(eatFood / 2);
+            // alert("🖕🖕");
+            free.textContent = countFree;
+            if (eatFood >= 0) {
+                hunger += 20;
+                if (coins < 0) { coins = 0; };
+                if (hunger > 100) { hunger = 100; };
+                if (level >= 5) {
+                    levelPet += 20 * (1 / 3);
+                }
+                else { levelPet += (20 / 2) }
+                if (levelPet >= 100) {
+                    levelPet = 100;
+                    level += 1;
+                    levelPet = 0;
+                }
+                setLevelProgress(levelPet);
+                setCircleHungerProgress(hunger);
+
+                levelNumber.textContent = numberLevel(level);
+            }
+            else {
+                eatFood = 0;
+                foodDog.src = "./public/images/trong-removebg-preview.png"
+            }
+            if (eatFood == 0) {
+                foodDog.src = "./public/images/trong-removebg-preview.png"
+                free.style.display = "none";
+            }
+        }
+    }
+    else {
         showNoti();
         notiGameTile.innerHTML = `
-            <span>THÚ CƯNG ĐÃ</span>
+            <span>THỨC ĂN CỦA</span>
             <br>
-            <b>NO SAY</b>
+            <b>THÚ CƯNG ĐÃ HẾT</b>
         `
-        //    show thông báo thức ăn đã 100%
-    } else {
-        if (countFree == 0) {
-            free.style.display = "none";
-        }
-        eatFood = eatFood - 1;
-        countFree = Math.round(eatFood / 2);
-        // alert("🖕🖕");
-        free.textContent = countFree;
-        if (eatFood >= 0) {
-            hunger += 20;
-            if (coins < 0) { coins = 0; };
-            if (hunger > 100) { hunger = 100; };
-            if (level >= 5) {
-                levelPet += 20 * (1 / 3);
-            }
-            else { levelPet += (20 / 2) }
-            if (levelPet >= 100) {
-                levelPet = 100;
-                level += 1;
-                levelPet = 0;
-            }
-            setLevelProgress(levelPet);
-            setCircleHungerProgress(hunger);
-
-            levelNumber.textContent = numberLevel(level);
-        }
-        else {
-            eatFood = 0;
-            foodDog.src = "./public/images/trong-removebg-preview.png"
-        }
-        if (eatFood == 0) {
-            foodDog.src = "./public/images/trong-removebg-preview.png"
-            free.style.display = "none";
-        }
     }
 }
 

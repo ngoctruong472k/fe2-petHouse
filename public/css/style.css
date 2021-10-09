@@ -1,7 +1,5 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900");
-@import url("https://fonts.googleapis.com/css?family=Black+Ops+One"); */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 html {
     background-image: url("../images/bg-game.jpg");
@@ -222,7 +220,7 @@ body {
     top: 8%;
     right: 1%;
     width: 160px;
-    height: 350px;
+    height: 340px;
     /* fill: rgba(255, 255, 255, 0.851); */
     /* background: #FACE9C; */
     background-color: #face9c;
@@ -257,6 +255,7 @@ body {
     z-index: 1000;
     left: 16px;
     top: 22px;
+    font-family: 'Black Ops One', cursive;
 }
 
 .image-eat span {
