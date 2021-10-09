@@ -78,13 +78,14 @@
                 <img class="start" src="./public/images/start.png" alt="">
                 <div class="number-start" id="levelNumber">01</div>
                 <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 0;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="progressLevel"></div>
+                    <div class="progress-bar" role="progressbar" style="width: 0;" aria-valuenow="25" aria-valuemin="0"
+                        aria-valuemax="100" id="progressLevel"></div>
                 </div>
             </div>
         </div>
         <div class="music-game">
             <button id="playpausebtn"></button>
-            <button id="mutebtn" class="ml-2"></button>
+            <!-- <button id="mutebtn" class="ml-2"></button> -->
         </div>
         <div class="table-coin">
             <button id="coins-button" class="table-coin-button">
@@ -94,37 +95,43 @@
         </div>
         <div class="petShop">
             <div class="table-eat">
-               <div class="lable-table lable-table-top">Thức ăn</div>
+                <div class="lable-table lable-table-top">Thức ăn</div>
                 <div class="table-eat-top table-eat">
                     <button class="image-eat" onClick="onBuy('food',20)" style="margin-right: 30px;">
                         <div class="quantity" id="countFree">2</div>
                         <img class="img-format" src="./public/images/dodungtas-removebg.png" alt="" width="65%">
-                        <span style="width:60px;">20<img src="./public/images/vang-bg.png" alt="" class="img-bold" width="28%"></span>
+                        <span style="width:60px;">20<img src="./public/images/vang-bg.png" alt="" class="img-bold"
+                                width="28%"></span>
                     </button>
                 </div>
                 <div class="lable-table-center lable-table">Đồ chơi</div>
                 <div class="table-eat-center table-eat">
                     <button id="eat-xuong" class="image-eat" onClick="onBuy('happiness',30)">
                         <img class="img-format" src="./public/images/xương.png" alt="" width="65%">
-                        <span style="width:60px;">30<img src="./public/images/vang-bg.png" alt="" class="img-bold" width="28%"></span>
+                        <span style="width:60px;">30<img src="./public/images/vang-bg.png" alt="" class="img-bold"
+                                width="28%"></span>
                     </button>
                     <button id="ball" class="image-eat" onClick="onBuy('happiness',30)">
                         <img class="img-format" src="./public/images/banh.png" alt="" width="55%">
-                        <span style="width:60px;">30<img src="./public/images/vang-bg.png" alt="" class="img-bold" width="28%"></span>
+                        <span style="width:60px;">30<img src="./public/images/vang-bg.png" alt="" class="img-bold"
+                                width="28%"></span>
                     </button>
-                   
+
                 </div>
                 <div class="table-eat table-eat-top-bottom">
                     <button id="bear" class="image-eat" onClick="onBuy('happiness',10)" style="margin-right: 30px;">
                         <img class="img-format" src="./public/images/gau.png" alt="" width="65%">
-                        <span style="width:60px;">10<img src="./public/images/vang-bg.png" alt="" class="img-bold" width="28%"></span>
+                        <span style="width:60px;">10<img src="./public/images/vang-bg.png" alt="" class="img-bold"
+                                width="28%"></span>
                     </button>
                 </div>
                 <div class="lable-table-bottom lable-table">tắm rửa</div>
                 <div class="table-eat-bottom table-eat">
-                    <button id="clear-body" class="image-eat" onClick="onBuy('hygienic',30)" style="margin-right: 30px;">
-                        <img class="img-format" src="./public/images/showerDog.png" alt="" width="75%" >
-                        <span style="width:60px;">30<img src="./public/images/vang-bg.png" alt="" class="img-bold" width="28%"></span>
+                    <button id="clear-body" class="image-eat" onClick="onBuy('hygienic',30)"
+                        style="margin-right: 30px;">
+                        <img class="img-format" src="./public/images/showerDog.png" alt="" width="75%">
+                        <span style="width:60px;">30<img src="./public/images/vang-bg.png" alt="" class="img-bold"
+                                width="28%"></span>
                     </button>
                 </div>
             </div>
@@ -156,11 +163,11 @@
             <p> THÚC </p>
         </div>
         <div class="continue">
-            <p> HÃY CỐ GẮN VÀO LẦN TIẾP THEO NHÁ !! </p>
+            <p> THÚ CƯNG ĐÃ CHẾT VÌ CHĂM SÓC KHÔNG CẨN THẬN, BẠN TỆ!! </p>
         </div>
 
         <div class="action">
-            <div class="yes" id="continue" onClick="continueGame()"> CHƠI TIẾP</div>
+            <div class="yes" id="continue" onClick="continueGame()"> CHƠI LẠI</div>
             <div class="no" id="black" onClick="blackGame()"> THOÁT</div>
         </div>
     </div>

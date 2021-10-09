@@ -270,9 +270,13 @@ body {
 }
 
 .coinpet {
-    animation: animaInfo 10s ease-in-out;
-    z-index: 1;
+    position: absolute;
+    animation: animaInfo 15s;
+    z-index: 10;
     cursor: pointer;
+    -webkit-animation-fill-mode: both;
+    top: -150px;
+    animation-delay: 5s;
 }
 
 .resource {
@@ -282,18 +286,12 @@ body {
     display: flex;
 }
 
-/* #coins {
-    border: 1px black solid;
-    padding:4px;
-    border-radius: 20px;
-} */
-
 @keyframes animaInfo {
     0% {
         transform: translateY(0);
     }
-    99% {
-        transform: translateY(500px);
+    100% {
+        transform: translateY(550px);
     }
 }
 

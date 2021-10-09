@@ -24,6 +24,7 @@ let progressLevel = document.getElementById('progressLevel');
 let levelNumber = document.getElementById('levelNumber');
 audio = new Audio();
 let pickUpCoin = () => {
+    coin.style.left = randomNumber(200, 1140) + "px";
     if (level <= 1) {
         coins += 10;
     }
@@ -36,10 +37,9 @@ let pickUpCoin = () => {
 let randomNumber = (min, max) => {
     return Math.random() * (max - min) + min;
 }
-
+coin.style.left = 450 + "px";
 setInterval(() => {
     setTimeout(() => {
-        coin.style.left = randomNumber(200, 1140) + "px";
         coin.style.display = "block";
 
     }, 10001);
@@ -102,7 +102,6 @@ function showNoti() {
 function setLevelProgress(data) {
     progressLevel.setAttribute('aria-valuenow', data);
     progressLevel.setAttribute('style', 'width:' + Number(data).toFixed(0) + '%');
-    progressLevel.innerHTML = `<b>${Number(data).toFixed(0) + '%'}</b>`
 }
 
 function onBuy(name, price) {
@@ -183,7 +182,7 @@ function onBuy(name, price) {
             if (level >= 5) {
                 levelPet += price * (1 / 3);
             }
-            else{ levelPet += (price / 2)}
+            else { levelPet += (price / 2) }
             if (levelPet >= 100) {
                 levelPet = 100;
                 level += 1;
@@ -221,7 +220,7 @@ function onBuy(name, price) {
             if (level >= 5) {
                 levelPet += price * (1 / 3);
             }
-            else{ levelPet += (price / 2)}
+            else { levelPet += (price / 2) }
             if (levelPet >= 100) {
                 levelPet = 100;
                 level += 1;
@@ -229,7 +228,7 @@ function onBuy(name, price) {
             }
             setLevelProgress(levelPet);
             setCircleHygienicProgress(hygienic);
-            coinTab.textContent = coins
+            coinTab.textContent = coins;
             levelNumber.textContent = numberLevel(level);
         }
     }
@@ -266,7 +265,7 @@ foodDog.onclick = function () {
             if (level >= 5) {
                 levelPet += 20 * (1 / 3);
             }
-            else{ levelPet += (20 / 2)}
+            else { levelPet += (20 / 2) }
             if (levelPet >= 100) {
                 levelPet = 100;
                 level += 1;
@@ -313,9 +312,7 @@ function playAudioGame() {
     }
     // Set object references
     playbtn = document.getElementById("playpausebtn");
-    mutebtn = document.getElementById("mutebtn");
     playbtn.addEventListener("click", playPause);
-    mutebtn.addEventListener("click", mute);
     function playPause() {
         if (audio.paused) {
             audio.play();
@@ -323,15 +320,6 @@ function playAudioGame() {
         } else {
             audio.pause();
             playbtn.style.background = "url(./public/images/play.svg) no-repeat";
-        }
-    }
-    function mute() {
-        if (audio.muted) {
-            audio.muted = false;
-            mutebtn.style.background = "url(./public/images/speaker.svg) no-repeat";
-        } else {
-            audio.muted = true;
-            mutebtn.style.background = "url(./public/images/mute.svg) no-repeat";
         }
     }
 }
@@ -347,7 +335,12 @@ function continueGame() {
         hygienic = 100;
         happiness = 100;
         coins = 100;
-        countFree = 2;
+        eatFood = 4;
+        level = 1;
+        levelPet = 0;
+        coinTab.textContent = coins;
+        countFree = Math.round(eatFood / 2);
+        free.textContent = countFree;
     }, 100);
     // audio.play();
     playAudioGame()
@@ -361,9 +354,17 @@ function blackGame() {
     noteGame.style.display = "none";
     startGame.style.display = "block";
     mainGame.style.display = "none";
-    hygienic = 100;
+    count = 0;
     hunger = 100;
+    hygienic = 100;
     happiness = 100;
+    coins = 100;
+    eatFood = 4;
+    level = 1;
+    levelPet = 0;
+    coinTab.textContent = coins;
+    countFree = Math.round(eatFood / 2);
+    free.textContent = countFree;
     audio.pause();
     audio.src = "";
     // audio.play();
