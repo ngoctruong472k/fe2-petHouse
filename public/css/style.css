@@ -333,66 +333,31 @@ body {
 .noti-game {
     position: absolute;
     top: 36%;
-    width: 550px;
+    width: 381px;
     height: 250px;
     z-index: 33333;
-    background-color: #ffffff;
+    background: #3366CC;
     left: 35%;
     right: 50%;
     padding: 16px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: #FFF;
 }
 
 #noti-game-title {
-    font-size: 24px;
+    font-size: 40px;
     font-style: italic;
     font-weight: 600;
     margin: 8px 0px;
 }
-
-.btn-noti {
-    cursor: pointer;
-    font-size: 20px;
-    position: absolute;
-    background: #fff;
-    font-style: italic;
-    font-weight: 600;
-    margin: 8px 0px;
-    padding: 8px 50px;
-    text-transform: uppercase;
-    bottom: 8px;
-    left: 38%;
+.close{
+    background: linear-gradient(to right, #990000 0%, #777777 100%);
+    width: 39%;
+    height: 45px;
+    font-size: 21px;
 }
 
-.btn-noti svg {
-    height: 40px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.btn-noti rect {
-    fill: none;
-    stroke: #e02c26;
-    stroke-width: 5;
-    stroke-dasharray: 422, 0;
-    transition: all 0.35s linear;
-}
-
-.btn-noti:hover {
-    font-style: italic;
-    font-weight: 600;
-    margin: 8px 0px;
-}
-
-.btn-noti:hover rect {
-    stroke-width: 5;
-    stroke-dasharray: 15, 400;
-    stroke-dashoffset: 48;
-    transition: all 2.35s cubic-bezier(0.19, 1, 0.22, 1);
-}
 
 .game-over {
     position: absolute;

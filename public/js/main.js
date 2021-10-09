@@ -112,9 +112,9 @@ function onBuy(name, price) {
             if (coins < 20) {
                 showNoti();
                 notiGameTile.innerHTML = `
-                    <span>Số tiền không đủ để mua</span>
+                    <span>KHÔNG ĐỦ</span>
                     <br>
-                    <b>Thức ăn</b>
+                    <b>TIỀN</b>
                 `
                 //    show thông báo số tiền không đủ
             }
@@ -134,9 +134,9 @@ function onBuy(name, price) {
             if (coins < 20) {
                 showNoti();
                 notiGameTile.innerHTML = `
-                    <span>Số tiền không đủ để mua</span>
-                    <br>
-                    <b>Thức ăn</b>
+                <span>KHÔNG ĐỦ</span>
+                <br>
+                <b>TIỀN</b>
                 `
                 //    show thông báo số tiền không đủ
             }
@@ -161,18 +161,18 @@ function onBuy(name, price) {
             // show thông báo cảm xúc đã 100%
             showNoti();
             notiGameTile.innerHTML = `
-                <span>Cảm xúc đã</span>
+                <span>THÚ CƯNG ĐANG</span>
                 <br>
-                <b>100%</b>
+                <b>RẤT VUI VẺ</b>
             `
         }
         else if (coins < price) {
             //   show thông báo tiền không đủ
             showNoti();
             notiGameTile.innerHTML = `
-                <span>Tiền của bạn không đủ mua thêm</span>
-                <br>
-                <b>cảm xúc</b>
+            <span>KHÔNG ĐỦ</span>
+            <br>
+            <b>TIỀN</b>
             `
         } else if (coins >= price) {
             coins -= price;
@@ -199,18 +199,18 @@ function onBuy(name, price) {
             // show thông báo cảm xúc đã 100%
             showNoti();
             notiGameTile.innerHTML = `
-                <span>Vệ sinh đã </span>
+                <span>THÚ CƯNG ĐÃ</span>
                 <br>
-                <b>sạch sẽ </b>
+                <b>SẠCH SẼ</b>
             `
         }
         else if (coins < price) {
             //   show thông báo tiền không đủ
             showNoti();
             notiGameTile.innerHTML = `
-                <span>Tiền của bạn không đủ mua thêm</span>
-                <br>
-                <b>dịch vụ Vệ sinh</b>
+            <span>KHÔNG ĐỦ</span>
+            <br>
+            <b>TIỀN</b>
             `
         } else if (coins >= price) {
             coins -= price;
@@ -245,9 +245,9 @@ foodDog.onclick = function () {
     if (hunger >= 100) {
         showNoti();
         notiGameTile.innerHTML = `
-            <span>Thức ăn đã</span>
+            <span>THÚ CƯNG ĐÃ</span>
             <br>
-            <b>đầy đủ</b>
+            <b>NO SAY</b>
         `
         //    show thông báo thức ăn đã 100%
     } else {
